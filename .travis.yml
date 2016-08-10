@@ -1,4 +1,11 @@
 language: node_js
 node_js:
 - '6'
-
+notifications:
+  email:
+    recipients:
+      - azat.io16@yandex.ru
+    on_success: always
+    on_failure: always
+script:
+- npm run test
