@@ -4,6 +4,8 @@ import express from 'express'
 import path from 'path'
 import chalk from 'chalk'
 
+import helpers from './helpers'
+
 import postcss from 'postcss-middleware'
 import cssNext from 'postcss-cssnext'
 import atImport from 'postcss-import'
@@ -38,6 +40,33 @@ app.get('/', (req, res) => {
   console.time('render')
   res.render('index')
   console.timeEnd('render')
+})
+
+app.get('/helpers', (req, res) => {
+  switch (req.query.type) {
+    case 'square':
+      res.json({
+        result: helpers.squareArea(req.query.side)
+      })
+      break
+    case 'rectangle':
+      res.json({
+        result: helpers.rectangeArea(req.query.rectWidth, req.query.rectHeight)
+      })
+      break
+    case 'triangle':
+      res.json({
+        result: helpers.triangleArea(req.query.sideFirst, req.query.sideSecond, req.query.sideThird)
+      })
+      break
+    case 'circle':
+      res.json({
+        result: helpers.circleArea(req.query.radius)
+      })
+      break
+    default:
+      res.sendStatus(404)
+  }
 })
 
 app.listen(app.get('port'), () => {
