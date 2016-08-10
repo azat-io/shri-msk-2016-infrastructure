@@ -1,3 +1,104 @@
-h1 {
-  color: red;
+@import 'normalize.css';
+
+:root {
+  --colorYellow: #fbd75d;
+}
+
+::selection {
+  background: var(--colorYellow);
+  color: #000;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background: var(--colorYellow);
+  padding: 12px 0;
+  border-bottom: 1px solid #000;
+
+  & h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+  flex: 1px;
+
+  &__form {
+    min-width: 320px;
+
+    &-input {
+      font-size: 1.2em;
+      line-height: 1.4;
+      display: block;
+      outline: 0;
+      margin: 6px 0;
+      width: 100%;
+    }
+
+    &-button {
+      background: var(--colorYellow);
+      outline: 0;
+      padding: 5px 16px;
+      border: 0;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-right: 20px;
+
+      &:hover {
+        background: color(var(--colorYellow) blackness(6%));
+      }
+    }
+
+    &-result {
+      background: #fff;
+      border: 0;
+      text-decoration: underline;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: red;
+    }
+  }
+
+  &__select {
+    background: #fff;
+    outline: 0;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border: 1px solid #000;
+  }
+
+  &__rectangle {
+    &-input {
+      font-size: 1.2em;
+      outline: 0;
+      margin: 4px 0;
+    }
+  }
+}
+
+.footer {
+  background: var(--colorYellow);
+  padding: 15px 0;
+  border-top: 1px solid #000;
+  text-align: center;
+
+  &__info {
+    font-size: 1.05em;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 }
