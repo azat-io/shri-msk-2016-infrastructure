@@ -22,14 +22,14 @@ html
         h2 Квадрат
         input(class='main__form-input' id='main__square-side' type='number' required placeholder='Сторона квадрата')
         input(type='button' class='main__form-button main__square-button' value='Результат')
-        input(id='main__square-result')
+        input(class='main__form-result' id='main__square-result' disabled)
 
       form(class='main__rectangle main__form')
         h2 Прямоугольник
         input(class='main__form-input' id='main__rectangle-weight' type='number' required placeholder='Ширина прямоугольника')
         input(class='main__form-input' id='main__rectangle-height' type='number' required placeholder='Высота прямоугольника')
         input(type='button' class='main__form-button main__rectangle-button' value='Результат')
-        input(id='main__rectangle-result')
+        input(class='main__form-result' id='main__rectangle-result' disabled)
 
       form(class='main__triangle main__form')
         h2 Треугольник
@@ -37,13 +37,13 @@ html
         input(class='main__form-input' id='main__triangle-side-2' type='number' required placeholder='Сторона треугольника')
         input(class='main__form-input' id='main__triangle-side-3' type='number' required placeholder='Сторона треугольника')
         input(type='button' class='main__form-button main__triangle-button' value='Результат')
-        input(id='main__triangle-result')
+        input(class='main__form-result' id='main__triangle-result' disabled)
 
       form(class='main__circle main__form')
         h2 Круг
         input(class='main__form-input' id='main__circle-radius' type='number' required placeholder='Сторона круга')
         input(type='button' class='main__form-button main__circle-button' value='Результат')
-        input(id='main__circle-result')
+        input(class='main__form-result' id='main__circle-result' disabled)
 
     footer(class='footer')
       a(class='footer__info' href='https://github.com/azat-io/shri-msk-2016-infrastructure') Исходный код
