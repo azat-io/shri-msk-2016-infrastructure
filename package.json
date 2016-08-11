@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "babel-node server",
+    "start": "./node_modules/.bin/babel-node server.js",
     "heroku:create-hosting": "heroku create",
     "heroku:deploy": "git push heroku +master",
     "lint": "npm-run-all --parallel lint:*",
