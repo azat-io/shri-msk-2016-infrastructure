@@ -1,16 +1,16 @@
 'use strict'
 
-import express from 'express'
-import path from 'path'
-import chalk from 'chalk'
+const express = require('express')
+const path = require('path')
+const chalk = require('chalk')
 
-import helpers from './helpers'
+const helpers = require('./helpers')
 
-import postcss from 'postcss-middleware'
-import cssNext from 'postcss-cssnext'
-import atImport from 'postcss-import'
-import csso from 'postcss-csso'
-import responsiveType from 'postcss-responsive-type'
+const postcss = require('postcss-middleware')
+const cssNext = require('postcss-cssnext')
+const atImport = require('postcss-import')
+const csso = require('postcss-csso')
+const responsiveType = require('postcss-responsive-type')
 
 const app = express()
 const port = 3000
